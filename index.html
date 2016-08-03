@@ -1,0 +1,93 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>JQuery Event Timeline</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <section class="bg-gunmetal-opaque section-padding padding-bottom-0">
+            <div class="event-timeline-gradient">
+                <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 1 1" preserveAspectRatio="none">
+                    <linearGradient id="g904" gradientUnits="userSpaceOnUse" x1="0%" y1="0%" x2="100%" y2="0%">
+                        <stop stop-opacity="0" stop-color="#f6f7f8" offset="0"></stop>
+                        <stop stop-opacity="0" stop-color="#f6f7f8" offset="0.7"></stop>
+                        <stop stop-opacity="1" stop-color="#f6f7f8" offset="1"></stop>
+                    </linearGradient>
+                    <rect x="0" y="0" width="1" height="1" fill="url(#g904)"></rect>
+                </svg>
+            </div>
+            <div class="margins mobile-no-padding-left-right">
+                <h1 class="main divider" data-treatment-color="yellow">Event Timeline</h1>
+                <div class="mobile-overflow-hidden">
+                    <div class="mobile-overflow-x-scroll">
+                        <div id="events-timeline">
+                            <!--<div class="timeline-row">
+                                <div class="event-item tooltipstered" data-left-pos="101" data-event-index="1" data-event-name="Application phase two" data-event-dates="Monday, January 25 - Monday, March 4, 2016" data-row="0" data-span-cols="39" style="position: absolute; top: 0px; height: 24px; left: 39.9963%; width: 17.2857%;"></div>
+                                <div class="event-item single-day tooltipstered" data-left-pos="152" data-event-index="3" data-event-name="Basecamp tour" data-event-dates="Wednesday, March 16, 2016" data-row="0" data-span-cols="1" data-single-day="1" style="position: absolute; top: 0px; height: 24px; left: 58.6777%; width: 24px;"></div>
+                                <div class="event-item tooltipstered" data-left-pos="168" data-event-index="6" data-event-name="Spring Onboarding" data-event-dates="Friday, April 1 - Friday, April 30, 2016" data-row="0" data-span-cols="29" style="position: absolute; top: 0px; height: 24px; left: 64.5385%; width: 13.6227%;"></div>
+                                <div class="event-item tooltipstered" data-left-pos="229" data-event-index="7" data-event-name="Summer Training" data-event-dates="Wednesday, June 1 - Wednesday, June 30, 2016" data-row="0" data-span-cols="29" style="position: absolute; top: 0px; height: 24px; left: 86.8828%; width: 13.6227%;"></div>
+                            </div>
+                            <div class="timeline-row">
+                                <div class="event-item active tooltipstered" data-left-pos="0" data-event-index="0" data-event-name="Application phase one" data-event-dates="Friday, October 16, 2015 - Friday, March 4, 2016" data-row="1" data-span-cols="140" style="position: absolute; top: 0px; height: 24px; left: 3%; width: 54.2821%;"></div>
+                                <div class="event-item single-day tooltipstered" data-left-pos="116" data-event-index="2" data-event-name="Basecamp tour" data-event-dates="Tuesday, February 9, 2016" data-row="1" data-span-cols="1" data-single-day="1" style="position: absolute; top: 0px; height: 24px; left: 45.4908%; width: 24px;"></div>
+                                <div class="event-item single-day tooltipstered" data-left-pos="161" data-event-index="4" data-event-name="Notification deadline" data-event-dates="Friday, March 25, 2016" data-row="1" data-span-cols="1" data-single-day="1" style="position: absolute; top: 0px; height: 24px; left: 61.9744%; width: 24px;"></div>
+                                <div class="event-item single-day tooltipstered" data-left-pos="171" data-event-index="5" data-event-name="Deadline for schools to confirm participation" data-event-dates="Monday, April 4, 2016" data-row="1" data-span-cols="1" data-single-day="1" style="position: absolute; top: 0px; height: 24px; left: 65.6374%; width: 24px;"></div>
+                            </div>-->
+                        </div>
+                        <div class="event-timeline-axis horizontal">
+                            <span class="year left">2015</span>
+                            <span class="year right">2016</span>
+                            <ul id="timeline-months"></ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="bg-gunmetal-opaque section-padding padding-top-30">
+            <div class="margins">
+                <div id="event-information" class="mobile-padding-bottom-60">
+                    <a href="#" class="event-navigation left empty"></a>
+                    <a href="#" class="event-navigation right"></a>
+                    <div class="event-information-item" data-event-index="0" data-event-name="Accepting Applications" data-event-start-date="10/16/2015" data-event-end-date="01/04/2016" data-timeline-row="bottom">
+                        <h1>Accepting Applications</h1>
+                        <h2>Friday, October 16, 2015 — Monday, January 4, 2016</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit proin dignissim erat vel consequat vulputate.</p>
+                    </div>
+                    <div class="event-information-item" data-event-index="1" data-event-name="Live tour" data-event-start-date="02/09/2016" data-event-end-date="" data-timeline-row="bottom">
+                        <h1>Live tour</h1>
+                        <h2>Tuesday, February 9, 2016</h2>
+                        <p>Nullam auctor nisl a nisl auctor fringilla sed id ante luctus, auctor orci in, iaculis erat. Donec quis metus eu urna ultrices facilisis nec nec libero.</p>
+                    </div>
+                    <div class="event-information-item" data-event-index="2" data-event-name="Live tour" data-event-start-date="03/16/2016" data-event-end-date="" data-timeline-row="top">
+                        <h1>Live tour</h1>
+                        <h2>Wednesday, March 16, 2016</h2>
+                        <p>Nullam auctor nisl a nisl auctor fringilla sed id ante luctus, auctor orci in, iaculis erat. Donec quis metus eu urna ultrices facilisis nec nec libero.</p>
+                    </div>
+                    <div class="event-information-item" data-event-index="3" data-event-name="Notification deadline" data-event-start-date="03/25/2016" data-event-end-date="" data-timeline-row="bottom">
+                        <h1>Notification deadline</h1>
+                        <h2>Friday, March 25, 2016</h2>
+                        <p>Praesent vestibulum tellus eget ligula aliquam, sagittis accumsan mi mattis.</p>
+                    </div>
+                    <div class="event-information-item" data-event-index="4" data-event-name="Spring Onboarding" data-event-start-date="04/01/2016" data-event-end-date="04/30/2016" data-timeline-row="top">
+                        <h1>Spring Onboarding</h1>
+                        <h2>Friday, April 1, 2016 — Saturday, April 30, 2016</h2>
+                        <p>Maecenas scelerisque odio in est dapibus, id consequat nisl tristique.</p>
+                    </div>
+                    <div class="event-information-item" data-event-index="5" data-event-name="Summer Training" data-event-start-date="06/01/2016" data-event-end-date="06/30/2016" data-timeline-row="top">
+                        <h1>Summer Training</h1>
+                        <h2>Wednesday, June 1, 2016 — Thursday, June 30, 2016</h2>
+                        <p>Nulla ac erat eget ipsum volutpat semper sed sed magna. Cras sit amet dolor tempor, venenatis elit interdum, gravida felis ut scelerisque metus eu lectus tincidunt, sed facilisis est dictum.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/tooltipster/3.3.0/js/jquery.tooltipster.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+        <script src="jquery-event-timeline.js"></script>
+        <script src="js/main.js"></script>
+    </body>
+</html>
